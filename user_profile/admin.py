@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from user_profile.models import User, Candidate, ContactMethod, WorkType, WorkCategory, Country
+from user_profile.models import User, Candidate, ContactMethod, WorkType, WorkCategory, Country, Employer
 
 
 @admin.register(User)
@@ -12,6 +12,12 @@ class UserAdmin(admin.ModelAdmin):
 @admin.register(Candidate)
 class CandidateAdmin(admin.ModelAdmin):
     pass
+
+
+@admin.register(Employer)
+class EmployerAdmin(admin.ModelAdmin):
+    pass
+
 
 
 @admin.register(Country)

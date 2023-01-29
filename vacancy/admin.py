@@ -7,9 +7,11 @@ from vacancy.models import Vacancy, Chat, ChatMessage
 class VacancyAdmin(admin.ModelAdmin):
     pass
 
+
 @admin.register(Chat)
 class ChatAdmin(admin.ModelAdmin):
     pass
+
 
 @admin.register(ChatMessage)
 class ChatMessageAdmin(admin.ModelAdmin):

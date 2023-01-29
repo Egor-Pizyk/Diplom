@@ -3,7 +3,7 @@ from django.contrib.auth.models import AbstractUser
 from django.utils.translation import gettext_lazy as _
 
 from CareerQuest.settings import CV_FILES_PATH, AVATAR_FILES_PATH
-from user_profile.choices import ROLE, ENGLISH_LEVEL, EMPLOYMENT_RATE
+from user_profile.choices import ROLE, ENGLISH_LEVEL, EMPLOYMENT_RATE, EMPLOY_COUNT
 from user_profile.managers import UserProfileManager
 
 
@@ -34,15 +34,14 @@ class Candidate(models.Model):
     about_work_experience = models.TextField(blank=True, null=True)
     about_work_expectations = models.TextField(blank=True, null=True)
     fav_contact_method = models.ForeignKey('ContactMethod', on_delete=models.CASCADE, blank=True, null=True)
-    email = models.EmailField()
-    skype = models.CharField(max_length=255)
-    phone = models.CharField(max_length=17, unique=True)
-    telegram = models.CharField(max_length=255)
-    linkedin_url = models.URLField()
-    github_url = models.URLField()
-    portfolio_url = models.URLField()
-    cv_file = models.FileField(upload_to=CV_FILES_PATH)
-    avatar_img = models.ImageField(upload_to=AVATAR_FILES_PATH)
+    skype = models.CharField(max_length=255, blank=True, null=True)
+    phone = models.CharField(max_length=17, unique=True, blank=True, null=True)
+    telegram = models.CharField(max_length=255, blank=True, null=True)
+    linkedin_url = models.URLField(blank=True, null=True)
+    github_url = models.URLField(blank=True, null=True)
+    portfolio_url = models.URLField(blank=True, null=True)
+    cv_file = models.FileField(upload_to=CV_FILES_PATH, blank=True, null=True)
+    avatar_img = models.ImageField(upload_to=AVATAR_FILES_PATH, blank=True, null=True)
 
     def __str__(self):
         return f'{self.user.first_name} {self.user.last_name}'
@@ -55,7 +54,7 @@ class Employer(models.Model):
     position = models.CharField(max_length=255)
     company_url = models.URLField()
     dou_url = models.URLField()
-    employ_count = models.PositiveSmallIntegerField()
+    employ_count = models.CharField(max_length=7, choices=EMPLOY_COUNT)
 
     def __str__(self):
         return f'{self.user.first_name} {self.user.last_name} - {self.company_name}'

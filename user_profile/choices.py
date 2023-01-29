@@ -25,3 +25,14 @@ OFFICE_REMOTE = 'O\\R'
 EMPLOYMENT_RATE = [(OFFICE, 'Office'),
                    (REMOTE, 'Remote'),
                    (OFFICE_REMOTE, 'Office\\Remote')]
+
+SMALL_SIZE_COMPANY = '1-10'
+MIDDLE_SIZE_COMPANY = '10-100'
+BIG_SIZE_COMPANY = '100-250'
+VERY_BIG_SIZE_COMPANY = '500+'
+
+
+EMPLOY_COUNT = [(SMALL_SIZE_COMPANY, '1-10'),
+                (MIDDLE_SIZE_COMPANY, '10-100'),
+                (BIG_SIZE_COMPANY, '100-250'),
+                (VERY_BIG_SIZE_COMPANY, '500+')]
