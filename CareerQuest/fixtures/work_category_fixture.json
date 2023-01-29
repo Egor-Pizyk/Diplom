@@ -1,0 +1,122 @@
+[
+    {
+        "model": "user_profile.workcategory",
+        "pk": 1,
+        "fields": {
+            "name": "JavaScript / Front-End",
+            "work_type_id": 1
+        }
+    },
+    {
+        "model": "user_profile.workcategory",
+        "pk": 2,
+        "fields": {
+            "name": "Java",
+            "work_type_id": 1
+        }
+    },
+    {
+        "model": "user_profile.workcategory",
+        "pk": 3,
+        "fields": {
+            "name": "C# / .NET",
+            "work_type_id": 1
+        }
+    },
+    {
+        "model": "user_profile.workcategory",
+        "pk": 4,
+        "fields": {
+            "name": "PHP",
+            "work_type_id": 1
+        }
+    },
+    {
+        "model": "user_profile.workcategory",
+        "pk": 5,
+        "fields": {
+            "name": "Python",
+            "work_type_id": 1
+        }
+    },
+    {
+        "model": "user_profile.workcategory",
+        "pk": 6,
+        "fields": {
+            "name": "QA Manual",
+            "work_type_id": 2
+        }
+    },
+    {
+        "model": "user_profile.workcategory",
+        "pk": 7,
+        "fields": {
+            "name": "Design / UI/UX",
+            "work_type_id": 2
+        }
+    },
+    {
+        "model": "user_profile.workcategory",
+        "pk": 8,
+        "fields": {
+            "name": "DevOps",
+            "work_type_id": 2
+        }
+    },
+    {
+        "model": "user_profile.workcategory",
+        "pk": 9,
+        "fields": {
+            "name": "Project Manager",
+            "work_type_id": 2
+        }
+    },
+    {
+        "model": "user_profile.workcategory",
+        "pk": 10,
+        "fields": {
+            "name": "Product Manager",
+            "work_type_id": 2
+        }
+    },
+    {
+        "model": "user_profile.workcategory",
+        "pk": 11,
+        "fields": {
+            "name": "SEO",
+            "work_type_id": 3
+        }
+    },
+    {
+        "model": "user_profile.workcategory",
+        "pk": 12,
+        "fields": {
+            "name": "HR",
+            "work_type_id": 3
+        }
+    },
+    {
+        "model": "user_profile.workcategory",
+        "pk": 13,
+        "fields": {
+            "name": "Recruiter",
+            "work_type_id": 3
+        }
+    },
+    {
+        "model": "user_profile.workcategory",
+        "pk": 14,
+        "fields": {
+            "name": "Lead Generation",
+            "work_type_id": 3
+        }
+    },
+    {
+        "model": "user_profile.workcategory",
+        "pk": 15,
+        "fields": {
+            "name": "(Other)",
+            "work_type_id": 3
+        }
+    }
+]

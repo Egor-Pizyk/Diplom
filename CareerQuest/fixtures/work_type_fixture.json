@@ -1,0 +1,23 @@
+[
+    {
+        "model": "user_profile.worktype",
+        "pk": 1,
+        "fields": {
+            "name": "Рзробка"
+        }
+    },
+    {
+        "model": "user_profile.worktype",
+        "pk": 2,
+        "fields": {
+            "name": "Ще технічні"
+        }
+    },
+    {
+        "model": "user_profile.worktype",
+        "pk": 3,
+        "fields": {
+            "name": "Не технічні"
+        }
+    }
+]

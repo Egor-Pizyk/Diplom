@@ -1,0 +1,23 @@
+[
+    {
+        "model": "user_profile.contactmethod",
+        "pk": 1,
+        "fields": {
+            "name": "E-mail"
+        }
+    },
+    {
+        "model": "user_profile.contactmethod",
+        "pk": 2,
+        "fields": {
+            "name": "Telegram"
+        }
+    },
+    {
+        "model": "user_profile.contactmethod",
+        "pk": 3,
+        "fields": {
+            "name": "CareerQuest chat"
+        }
+    }
+]
