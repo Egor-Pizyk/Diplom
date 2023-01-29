@@ -133,8 +133,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'user_profile.User'
 
-CV_FILES_PATH = 'cv_files/'
-AVATAR_FILES_PATH = 'avatar_files/'
+CV_FILES_PATH = 'user_upload/cv_files/'
+AVATAR_FILES_PATH = 'user_upload/avatar_files/'
 
 PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 FIXTURE_DIRS = (
