@@ -48,6 +48,19 @@ class Candidate(models.Model):
         return f'{self.user.first_name} {self.user.last_name}'
 
 
+class Employer(models.Model):
+    user = models.ForeignKey('User', on_delete=models.CASCADE)
+    company_name = models.CharField(max_length=500)
+    about_company = models.TextField()
+    position = models.CharField(max_length=255)
+    company_url = models.URLField()
+    dou_url = models.URLField()
+    employ_count = models.PositiveSmallIntegerField()
+
+    def __str__(self):
+        return f'{self.user.first_name} {self.user.last_name} - {self.company_name}'
+
+
 class Country(models.Model):
     name = models.CharField(max_length=255, unique=True)
 
@@ -57,7 +70,7 @@ class Country(models.Model):
 
 class WorkCategory(models.Model):
     name = models.CharField(max_length=255, unique=True)
-    work_type_id = models.ForeignKey('WorkType', on_delete=models.CASCADE)
+    work_type = models.ForeignKey('WorkType', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
