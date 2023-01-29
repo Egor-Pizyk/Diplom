@@ -1,0 +1,1521 @@
+[
+    {
+        "model": "myapp.country",
+        "pk": 1,
+        "fields": {
+            "name": "Украина"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 2,
+        "fields": {
+            "name": "Абхазия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 3,
+        "fields": {
+            "name": "Австралия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 4,
+        "fields": {
+            "name": "Австрия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 5,
+        "fields": {
+            "name": "Азербайджан"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 6,
+        "fields": {
+            "name": "Албания"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 7,
+        "fields": {
+            "name": "Алжир"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 8,
+        "fields": {
+            "name": "Ангола"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 9,
+        "fields": {
+            "name": "Ангуилья"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 10,
+        "fields": {
+            "name": "Андорра"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 11,
+        "fields": {
+            "name": "Антигуа и Барбуда"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 12,
+        "fields": {
+            "name": "Антильские о-ва"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 13,
+        "fields": {
+            "name": "Аргентина"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 14,
+        "fields": {
+            "name": "Армения"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 15,
+        "fields": {
+            "name": "Арулько"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 16,
+        "fields": {
+            "name": "Афганистан"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 17,
+        "fields": {
+            "name": "Багамские о-ва"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 18,
+        "fields": {
+            "name": "Бангладеш"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 19,
+        "fields": {
+            "name": "Барбадос"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 20,
+        "fields": {
+            "name": "Бахрейн"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 21,
+        "fields": {
+            "name": "Беларусь"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 22,
+        "fields": {
+            "name": "Белиз"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 23,
+        "fields": {
+            "name": "Бельгия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 24,
+        "fields": {
+            "name": "Бенин"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 25,
+        "fields": {
+            "name": "Бермуды"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 26,
+        "fields": {
+            "name": "Болгария"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 27,
+        "fields": {
+            "name": "Боливия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 28,
+        "fields": {
+            "name": "Босния/Герцеговина"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 29,
+        "fields": {
+            "name": "Ботсвана"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 30,
+        "fields": {
+            "name": "Бразилия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 31,
+        "fields": {
+            "name": "Британские Виргинские о-ва"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 32,
+        "fields": {
+            "name": "Бруней"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 33,
+        "fields": {
+            "name": "Буркина Фасо"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 34,
+        "fields": {
+            "name": "Бурунди"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 35,
+        "fields": {
+            "name": "Бутан"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 36,
+        "fields": {
+            "name": "Валлис и Футуна о-ва"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 37,
+        "fields": {
+            "name": "Вануату"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 38,
+        "fields": {
+            "name": "Великобритания"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 39,
+        "fields": {
+            "name": "Венгрия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 40,
+        "fields": {
+            "name": "Венесуэла"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 41,
+        "fields": {
+            "name": "Восточный Тимор"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 42,
+        "fields": {
+            "name": "Вьетнам"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 43,
+        "fields": {
+            "name": "Габон"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 44,
+        "fields": {
+            "name": "Гаити"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 45,
+        "fields": {
+            "name": "Гайана"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 46,
+        "fields": {
+            "name": "Гамбия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 47,
+        "fields": {
+            "name": "Гана"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 48,
+        "fields": {
+            "name": "Гваделупа"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 49,
+        "fields": {
+            "name": "Гватемала"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 50,
+        "fields": {
+            "name": "Гвинея"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 51,
+        "fields": {
+            "name": "Гвинея-Бисау"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 52,
+        "fields": {
+            "name": "Германия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 53,
+        "fields": {
+            "name": "Гернси о-в"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 54,
+        "fields": {
+            "name": "Гибралтар"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 55,
+        "fields": {
+            "name": "Гондурас"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 56,
+        "fields": {
+            "name": "Гонконг"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 57,
+        "fields": {
+            "name": "Гренада"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 58,
+        "fields": {
+            "name": "Гренландия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 59,
+        "fields": {
+            "name": "Греция"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 60,
+        "fields": {
+            "name": "Грузия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 61,
+        "fields": {
+            "name": "Дания"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 62,
+        "fields": {
+            "name": "Джерси о-в"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 63,
+        "fields": {
+            "name": "Джибути"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 64,
+        "fields": {
+            "name": "Доминиканская республика"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 65,
+        "fields": {
+            "name": "Египет"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 66,
+        "fields": {
+            "name": "Замбия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 67,
+        "fields": {
+            "name": "Западная Сахара"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 68,
+        "fields": {
+            "name": "Зимбабве"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 69,
+        "fields": {
+            "name": "Израиль"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 70,
+        "fields": {
+            "name": "Индия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 71,
+        "fields": {
+            "name": "Индонезия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 72,
+        "fields": {
+            "name": "Иордания"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 73,
+        "fields": {
+            "name": "Ирак"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 74,
+        "fields": {
+            "name": "Иран"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 75,
+        "fields": {
+            "name": "Ирландия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 76,
+        "fields": {
+            "name": "Исландия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 77,
+        "fields": {
+            "name": "Испания"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 78,
+        "fields": {
+            "name": "Италия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 79,
+        "fields": {
+            "name": "Йемен"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 80,
+        "fields": {
+            "name": "Кабо-Верде"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 81,
+        "fields": {
+            "name": "Казахстан"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 82,
+        "fields": {
+            "name": "Камбоджа"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 83,
+        "fields": {
+            "name": "Камерун"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 84,
+        "fields": {
+            "name": "Канада"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 85,
+        "fields": {
+            "name": "Катар"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 86,
+        "fields": {
+            "name": "Кения"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 87,
+        "fields": {
+            "name": "Кипр"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 88,
+        "fields": {
+            "name": "Кирибати"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 89,
+        "fields": {
+            "name": "Китай"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 90,
+        "fields": {
+            "name": "Колумбия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 91,
+        "fields": {
+            "name": "Коморские о-ва"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 92,
+        "fields": {
+            "name": "Конго (Brazzaville)"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 93,
+        "fields": {
+            "name": "Конго (Kinshasa)"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 94,
+        "fields": {
+            "name": "Коста-Рика"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 95,
+        "fields": {
+            "name": "Кот-д''''Ивуар"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 96,
+        "fields": {
+            "name": "Куба"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 97,
+        "fields": {
+            "name": "Кувейт"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 98,
+        "fields": {
+            "name": "Кука о-ва"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 99,
+        "fields": {
+            "name": "Кыргызстан"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 100,
+        "fields": {
+            "name": "Лаос"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 101,
+        "fields": {
+            "name": "Латвия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 102,
+        "fields": {
+            "name": "Лесото"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 103,
+        "fields": {
+            "name": "Либерия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 104,
+        "fields": {
+            "name": "Ливан"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 105,
+        "fields": {
+            "name": "Ливия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 106,
+        "fields": {
+            "name": "Литва"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 107,
+        "fields": {
+            "name": "Лихтенштейн"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 108,
+        "fields": {
+            "name": "Люксембург"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 109,
+        "fields": {
+            "name": "Маврикий"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 110,
+        "fields": {
+            "name": "Мавритания"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 111,
+        "fields": {
+            "name": "Мадагаскар"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 112,
+        "fields": {
+            "name": "Македония"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 113,
+        "fields": {
+            "name": "Малави"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 114,
+        "fields": {
+            "name": "Малайзия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 115,
+        "fields": {
+            "name": "Мали"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 116,
+        "fields": {
+            "name": "Мальдивские о-ва"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 117,
+        "fields": {
+            "name": "Мальта"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 118,
+        "fields": {
+            "name": "Мартиника о-в"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 119,
+        "fields": {
+            "name": "Мексика"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 120,
+        "fields": {
+            "name": "Мозамбик"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 121,
+        "fields": {
+            "name": "Молдова"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 122,
+        "fields": {
+            "name": "Монако"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 123,
+        "fields": {
+            "name": "Монголия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 124,
+        "fields": {
+            "name": "Марокко"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 125,
+        "fields": {
+            "name": "Мьянма (Бирма)"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 126,
+        "fields": {
+            "name": "Мэн о-в"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 127,
+        "fields": {
+            "name": "Намибия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 128,
+        "fields": {
+            "name": "Науру"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 129,
+        "fields": {
+            "name": "Непал"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 130,
+        "fields": {
+            "name": "Нигер"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 131,
+        "fields": {
+            "name": "Нигерия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 132,
+        "fields": {
+            "name": "Нидерланды (Голландия)"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 133,
+        "fields": {
+            "name": "Никарагуа"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 134,
+        "fields": {
+            "name": "Новая Зеландия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 135,
+        "fields": {
+            "name": "Новая Каледония о-в"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 136,
+        "fields": {
+            "name": "Норвегия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 137,
+        "fields": {
+            "name": "Норфолк о-в"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 138,
+        "fields": {
+            "name": "О.А.Э."
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 139,
+        "fields": {
+            "name": "Оман"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 140,
+        "fields": {
+            "name": "Пакистан"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 141,
+        "fields": {
+            "name": "Панама"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 142,
+        "fields": {
+            "name": "Папуа Новая Гвинея"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 143,
+        "fields": {
+            "name": "Парагвай"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 144,
+        "fields": {
+            "name": "Перу"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 145,
+        "fields": {
+            "name": "Питкэрн о-в"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 146,
+        "fields": {
+            "name": "Польша"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 147,
+        "fields": {
+            "name": "Португалия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 148,
+        "fields": {
+            "name": "Пуэрто Рико"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 149,
+        "fields": {
+            "name": "Реюньон"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 150,
+        "fields": {
+            "name": "Руанда"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 151,
+        "fields": {
+            "name": "Румыния"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 152,
+        "fields": {
+            "name": "США"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 153,
+        "fields": {
+            "name": "Сальвадор"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 154,
+        "fields": {
+            "name": "Самоа"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 155,
+        "fields": {
+            "name": "Сан-Марино"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 156,
+        "fields": {
+            "name": "Сан-Томе и Принсипи"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 157,
+        "fields": {
+            "name": "Саудовская Аравия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 158,
+        "fields": {
+            "name": "Свазиленд"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 159,
+        "fields": {
+            "name": "Святая Люсия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 160,
+        "fields": {
+            "name": "Святой Елены о-в"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 161,
+        "fields": {
+            "name": "Северная Корея"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 162,
+        "fields": {
+            "name": "Сейшеллы"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 163,
+        "fields": {
+            "name": "Сен-Пьер и Микелон"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 164,
+        "fields": {
+            "name": "Сенегал"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 165,
+        "fields": {
+            "name": "Сент Китс и Невис"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 166,
+        "fields": {
+            "name": "Сент-Винсент и Гренадины"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 167,
+        "fields": {
+            "name": "Сербия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 168,
+        "fields": {
+            "name": "Сингапур"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 169,
+        "fields": {
+            "name": "Сирия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 170,
+        "fields": {
+            "name": "Словакия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 171,
+        "fields": {
+            "name": "Словения"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 172,
+        "fields": {
+            "name": "Соломоновы о-ва"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 173,
+        "fields": {
+            "name": "Сомали"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 174,
+        "fields": {
+            "name": "Судан"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 175,
+        "fields": {
+            "name": "Суринам"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 176,
+        "fields": {
+            "name": "Сьерра-Леоне"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 177,
+        "fields": {
+            "name": "Таджикистан"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 178,
+        "fields": {
+            "name": "Тайвань"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 179,
+        "fields": {
+            "name": "Таиланд"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 180,
+        "fields": {
+            "name": "Танзания"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 181,
+        "fields": {
+            "name": "Того"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 182,
+        "fields": {
+            "name": "Токелау о-ва"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 183,
+        "fields": {
+            "name": "Тонга"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 184,
+        "fields": {
+            "name": "Тринидад и Тобаго"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 185,
+        "fields": {
+            "name": "Тувалу"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 186,
+        "fields": {
+            "name": "Тунис"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 187,
+        "fields": {
+            "name": "Туркменистан"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 188,
+        "fields": {
+            "name": "Туркс и Кейкос"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 189,
+        "fields": {
+            "name": "Турция"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 190,
+        "fields": {
+            "name": "Уганда"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 191,
+        "fields": {
+            "name": "Узбекистан"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 192,
+        "fields": {
+            "name": "Уругвай"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 193,
+        "fields": {
+            "name": "Фарерские о-ва"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 194,
+        "fields": {
+            "name": "Фиджи"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 195,
+        "fields": {
+            "name": "Филиппины"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 196,
+        "fields": {
+            "name": "Финляндия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 197,
+        "fields": {
+            "name": "Франция"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 198,
+        "fields": {
+            "name": "Французская Гвинея"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 199,
+        "fields": {
+            "name": "Французская Полинезия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 200,
+        "fields": {
+            "name": "Хорватия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 201,
+        "fields": {
+            "name": "Чад"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 202,
+        "fields": {
+            "name": "Черногория"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 203,
+        "fields": {
+            "name": "Чехия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 204,
+        "fields": {
+            "name": "Чили"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 205,
+        "fields": {
+            "name": "Швейцария"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 206,
+        "fields": {
+            "name": "Швеция"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 207,
+        "fields": {
+            "name": "Шри-Ланка"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 208,
+        "fields": {
+            "name": "Эквадор"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 209,
+        "fields": {
+            "name": "Экваториальная Гвинея"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 210,
+        "fields": {
+            "name": "Эритрея"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 211,
+        "fields": {
+            "name": "Эстония"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 212,
+        "fields": {
+            "name": "Эфиопия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 213,
+        "fields": {
+            "name": "ЮАР"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 214,
+        "fields": {
+            "name": "Южная Корея"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 215,
+        "fields": {
+            "name": "Южная Осетия"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 216,
+        "fields": {
+            "name": "Ямайка"
+        }
+    },
+    {
+        "model": "myapp.country",
+        "pk": 217,
+        "fields": {
+            "name": "Япония"
+        }
+    }
+]
