@@ -1,0 +1,18 @@
+<form method="post">
+    {% csrf_token %}
+    <input type="email" name="username" id="login-email" placeholder="Email">
+    <input type="password" name="password" id="login-password1" placeholder="Пароль">
+
+    <div class="error">
+        {% for field, errors in form.errors.items %}
+            {% for error in errors %}
+                {{ error }}<br>
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+    <input type="submit" value="Увійти">
+</form>
+<a href="{% url 'user_auth:user-register' %}">Реєстрація</a>
+ ·
+<a href="{% url 'user_auth:user-remind' %}">Забув пароль?</a>

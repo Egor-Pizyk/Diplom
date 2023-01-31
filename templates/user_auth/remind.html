@@ -1,0 +1,16 @@
+<form method="post">
+    {% csrf_token %}
+    <input type="email" name="username" id="login-email" placeholder="Email">
+
+    <div class="error">
+        {% for field, errors in form.errors.items %}
+            {% for error in errors %}
+                {{ error }}
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+    <input type="submit" value="Продовжити">
+</form>
+<a href="{% url 'user_auth:user-login' %}">Я згадав пароль</a>
+

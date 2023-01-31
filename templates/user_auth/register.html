@@ -1,0 +1,23 @@
+<form method="post">
+    {% csrf_token %}
+    <input type="email" name="username" id="login-email" placeholder="Email">
+    <input type="password" name="password1" id="login-password1" placeholder="Пароль">
+    <input type="password" name="password2" id="login-password2" placeholder="Підтвердження пароля">
+
+    <input type="radio" name="role" id="role-EMP" value="EMP">
+    <label for="role-EMP">Я рекрутер — шукаю розробників</label>
+
+    <input type="radio" name="role" id="role-CAN" value="CAN">
+    <label for="role-CAN">Я кандидат – шукаю пропозиції</label>
+
+    <div class="error">
+        {% for field, errors in form.errors.items %}
+            {% for error in errors %}
+                {{ error }}<br>
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+    <input type="submit" value="Реєстрація">
+</form>
+<a href="{% url 'user_auth:user-login' %}">У мене вже є обліковий запис</a>

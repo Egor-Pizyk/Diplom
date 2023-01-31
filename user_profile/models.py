@@ -25,7 +25,6 @@ class Candidate(models.Model):
     hour_salary = models.PositiveSmallIntegerField(blank=True, null=True)
     experience = models.FloatField()
     country = models.ForeignKey('Country', on_delete=models.CASCADE)
-    is_ready_to_relocate_city = models.BooleanField(blank=True, null=True)
     is_ready_to_relocate_country = models.BooleanField(blank=True, null=True)
     skills = models.TextField()
     work_category = models.ForeignKey('WorkCategory', on_delete=models.CASCADE)
