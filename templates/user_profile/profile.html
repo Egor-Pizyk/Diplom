@@ -1,5 +1,4 @@
 {% load static %}
-<script src="{% static 'jquery-3.6.3.min.js' %}"></script>
 
 <form method="post">
     {% csrf_token %}
@@ -33,6 +32,7 @@
 
     <label for="country_id">Country</label>
     <select name="country" id="country_id">
+        <option selected>---------</option>
         {% for country in country_list %}
             <option value="{{ country.pk }}">{{ country.name }}</option>
         {% endfor %}
@@ -46,6 +46,7 @@
 
     <label for="work_category_id">Work category</label>
     <select name="work_category" id="work_category_id">
+        <option selected>---------</option>
         {% for work_type in work_type_list %}
             <optgroup label="{{ work_type.name }}">
             {% for work_category in work_category_list %}
@@ -59,6 +60,7 @@
 
     <label for="english_level_id">English level</label>
     <select name="english_level" id="english_level_id">
+        <option selected>---------</option>
         {% for english_level in english_level_list %}
             <option value="{{ english_level.0 }}">{{ english_level.1 }}</option>
         {% endfor %}
@@ -66,6 +68,7 @@
 
     <label for="employment_rate_id">Employment rate</label>
     <select name="employment_rate" id="employment_rate_id">
+        <option selected>---------</option>
         {% for employment_rate in employment_rate_list %}
             <option value="{{ employment_rate.0 }}">{{ employment_rate.1 }}</option>
         {% endfor %}
@@ -79,6 +82,7 @@
 
     <label for="fav_contact_method_id">To contact with me use</label>
     <select name="fav_contact_method" id="fav_contact_method_id">
+        <option selected>---------</option>
         {% for fav_contact_method in fav_contact_method_list %}
             <option value="{{ fav_contact_method.pk }}">{{ fav_contact_method.name }}</option>
         {% endfor %}
@@ -96,7 +100,7 @@
     <input type="submit" value="Save">
 </form>
 
-<a href="#">Remove profile</a>
+<a href="">Remove profile</a>
 
 <form action="{% url 'user_profile:remove-my-profile' %}" method="post">
     {% csrf_token %}
@@ -105,4 +109,5 @@
     <input type="button" name="" id="" value="Cancel">
 </form>
 
+<script src="{% static 'jquery-3.6.3.min.js' %}"></script>
 <script src="{% static 'user_profile/js/profile.js' %}"></script>

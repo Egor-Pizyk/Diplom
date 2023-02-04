@@ -20,6 +20,8 @@ class User(AbstractUser):
 
 class Candidate(models.Model):
     user = models.ForeignKey('User', on_delete=models.CASCADE)
+    work_email = models.EmailField(null=True, blank=True)
+    is_active_profile = models.BooleanField(default=True)
     position = models.CharField(max_length=500)
     month_salary = models.PositiveSmallIntegerField(blank=True, null=True)
     hour_salary = models.PositiveSmallIntegerField(blank=True, null=True)
@@ -43,7 +45,7 @@ class Candidate(models.Model):
     avatar_img = models.ImageField(upload_to=AVATAR_FILES_PATH, blank=True, null=True)
 
     def __str__(self):
-        return f'{self.user.first_name} {self.user.last_name}'
+        return f'{self.user.email} {self.user.first_name} {self.user.last_name}'
 
 
 class Employer(models.Model):
@@ -56,7 +58,7 @@ class Employer(models.Model):
     employ_count = models.CharField(max_length=7, choices=EMPLOY_COUNT)
 
     def __str__(self):
-        return f'{self.user.first_name} {self.user.last_name} - {self.company_name}'
+        return f'{self.user.email} {self.user.first_name} {self.user.last_name} - {self.company_name}'
 
 
 class Country(models.Model):

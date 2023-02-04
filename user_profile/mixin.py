@@ -3,7 +3,7 @@ from user_profile.models import Country, WorkCategory, WorkType, ContactMethod
 
 
 class UserProfileFormDataMixin:
-    def get_context_data(self, old_context=None):
+    def get_custom_context_data(self, old_context=None):
         if old_context is None:
             old_context = {}
 

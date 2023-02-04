@@ -8,6 +8,7 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView, TemplateView
 from dotenv import load_dotenv
 
+from CareerQuest.settings import SHORT_DJANGO_KEY
 from user_auth.forms import AuthUserForm, RegisterUserForm, UpdateUserPasswordForm, UserRemindForm
 from user_auth.utils import send_email
 from user_profile.models import User
@@ -35,11 +36,10 @@ class UserRemindView(TemplateView):
     template_name = 'user_auth/remind.html'
 
     def post(self, request, *args, **kwargs):
-        load_dotenv()
         context = {}
         form = UserRemindForm(request.POST)
         if form.is_valid():
-            fernet = Fernet(base64.b64encode(str.encode(os.getenv('SHORT_DJANGO_KEY'))))
+            fernet = Fernet(base64.b64encode(str.encode(SHORT_DJANGO_KEY)))
             user = User.objects.get(email=request.POST['username'])
             code = fernet.encrypt(str.encode(str(user.pk)))
             send_email(user.email, code)
