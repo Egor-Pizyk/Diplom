@@ -1,0 +1,23 @@
+<header>
+    {{ user }}
+    <ul class="navbar">
+        <li class="nav-item"><a href="#" class="nav-link">Vacancies</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Suggestions</a></li>
+    </ul>
+
+    <div class="user_status"></div>
+
+    <div class="images-container">
+        <img src="" alt="userpic" class="userpic-image">
+    </div>
+
+    <div class="header-dropdown--btn">
+        <img src="" alt="header-dropdown">
+    </div>
+
+    <ul>
+        <li>My profile</li>
+        <li>Switch to Ukrainian</li>
+        <li><a href="{% url 'user_auth:user-logout' %}">Log out</a></li>
+    </ul>
+</header>

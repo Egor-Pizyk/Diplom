@@ -5,10 +5,10 @@
     <input type="password" name="password2" id="login-password2" placeholder="Підтвердження пароля">
 
     <input type="radio" name="role" id="role-EMP" value="EMP">
-    <label for="role-EMP">Я рекрутер — шукаю розробників</label>
+    <label for="role-EMP">I'm recruiter</label>
 
     <input type="radio" name="role" id="role-CAN" value="CAN">
-    <label for="role-CAN">Я кандидат – шукаю пропозиції</label>
+    <label for="role-CAN">I'm candidat</label>
 
     <div class="error">
         {% for field, errors in form.errors.items %}
@@ -18,6 +18,6 @@
         {% endfor %}
     </div>
 
-    <input type="submit" value="Реєстрація">
+    <input type="submit" value="Register">
 </form>
-<a href="{% url 'user_auth:user-login' %}">У мене вже є обліковий запис</a>
+<a href="{% url 'user_auth:user-login' %}">I have an account</a>

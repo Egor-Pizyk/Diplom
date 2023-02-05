@@ -36,7 +36,7 @@ class Candidate(models.Model):
     about_work_expectations = models.TextField(blank=True, null=True)
     fav_contact_method = models.ForeignKey('ContactMethod', on_delete=models.CASCADE, blank=True, null=True)
     skype = models.CharField(max_length=255, blank=True, null=True)
-    phone = models.CharField(max_length=17, unique=True, blank=True, null=True)
+    phone = models.CharField(max_length=255, blank=True, null=True)
     telegram = models.CharField(max_length=255, blank=True, null=True)
     linkedin_url = models.URLField(blank=True, null=True)
     github_url = models.URLField(blank=True, null=True)

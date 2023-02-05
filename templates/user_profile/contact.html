@@ -2,6 +2,12 @@
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
 
+    <label for="position_id">First name</label>
+    <input type="text" name="first_name" id="position_id">
+
+    <label for="position_id">Last name</label>
+    <input type="text" name="last_name" id="position_id">
+
     <label for="position_id">Email</label>
     <input type="text" name="work_email" id="position_id">
 

@@ -1,6 +1,7 @@
 import base64
 import os
 
+from django.contrib.auth import logout
 from django.contrib.auth.views import LoginView
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
@@ -24,6 +25,11 @@ class UserLoginView(LoginView):
             return reverse_lazy('user_profile:my-profile')
         else:
             return reverse_lazy('user_auth:success')
+
+
+def user_logout(request):
+    logout(request)
+    return redirect('user_auth:user-login')
 
 
 class UserRegisterView(CreateView):
@@ -63,6 +69,7 @@ class UserResetPasswordView(TemplateView):
             return redirect('user_auth:user-login')
         context['form'] = form
         return render(request, 'user_auth/reset_password.html', context)
+
 
 def success(requests):
     return HttpResponse('ok')

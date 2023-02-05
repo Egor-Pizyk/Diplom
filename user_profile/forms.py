@@ -10,33 +10,35 @@ class MainDataCandidateProfileForm(forms.ModelForm):
     month_salary = forms.IntegerField()
     hour_salary = forms.FloatField()
     experience = forms.FloatField()
-    country = forms.IntegerField()
+    country_id = forms.IntegerField()
     is_ready_to_relocate_country = forms.BooleanField(required=False)
     skills = forms.CharField()
-    work_category = forms.IntegerField()
+    work_category_id = forms.IntegerField()
     english_level = forms.CharField()
     employment_rate = forms.CharField()
     about_work_experience = forms.CharField()
     about_work_expectations = forms.CharField()
-    fav_contact_method = forms.IntegerField()
+    fav_contact_method_id = forms.IntegerField()
 
     class Meta:
         model = Candidate
         fields = ('position',
                   'month_salary',
                   'experience',
-                  'country',
+                  'country_id',
                   'is_ready_to_relocate_country',
                   'skills',
-                  'work_category',
+                  'work_category_id',
                   'english_level',
                   'employment_rate',
                   'about_work_experience',
                   'about_work_expectations',
-                  'fav_contact_method')
+                  'fav_contact_method_id')
 
 
 class ContactDataCandidateProfileForm(forms.ModelForm):
+    first_name = forms.CharField(max_length=255, required=False)
+    last_name = forms.CharField(max_length=255, required=False)
     work_email = forms.CharField(max_length=255, required=False)
     skype = forms.CharField(max_length=255, required=False)
     phone = forms.CharField(max_length=255, required=False)
@@ -49,8 +51,8 @@ class ContactDataCandidateProfileForm(forms.ModelForm):
 
     def clean_phone(self):
         phone = self.cleaned_data['phone']
-        if Candidate.objects.filter(phone=phone).exists():
-            return forms.ValidationError("This phone already used!")
+        if Candidate.objects.filter(phone=phone).exists() and phone != '':
+            raise forms.ValidationError("This phone already used!")
 
         return phone
 
