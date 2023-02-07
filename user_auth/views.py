@@ -2,6 +2,7 @@ import base64
 import os
 
 from django.contrib.auth import logout
+from django.contrib.auth.models import AnonymousUser
 from django.contrib.auth.views import LoginView
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
@@ -14,6 +15,13 @@ from user_auth.forms import AuthUserForm, RegisterUserForm, UpdateUserPasswordFo
 from user_auth.utils import send_email
 from user_profile.models import User
 from cryptography.fernet import Fernet
+
+
+def to_login_redirect(request):
+    if isinstance(request.user, AnonymousUser):
+        return redirect('user_auth:user-login')
+    else:
+        return redirect('user_profile:main-info')
 
 
 class UserLoginView(LoginView):

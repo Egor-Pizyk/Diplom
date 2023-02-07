@@ -1,17 +1,25 @@
 <header>
-    {{ user }}
     <ul class="navbar">
         <li class="nav-item"><a href="#" class="nav-link">Vacancies</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Suggestions</a></li>
     </ul>
 
-    <div class="user_status"></div>
+    <div class="user_status">
+        {% if user.role == 'CAN' %}
+            {% if user.candidate_set.all.0.is_active_profile %}
+                In active job search
+            {% else %}
+                Inactive
+            {% endif %}
+        {% endif %}
+    </div>
 
     <div class="images-container">
         <img src="" alt="userpic" class="userpic-image">
     </div>
 
-    <div class="header-dropdown--btn">
+    <div class="header-dropdown">
+        <div class="header-dropdown--btn">
         <img src="" alt="header-dropdown">
     </div>
 
@@ -20,4 +28,5 @@
         <li>Switch to Ukrainian</li>
         <li><a href="{% url 'user_auth:user-logout' %}">Log out</a></li>
     </ul>
+    </div>
 </header>

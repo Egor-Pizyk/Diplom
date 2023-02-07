@@ -7,6 +7,8 @@ app_name = 'user_auth'
 urlpatterns = [
     path('success/', success, name='success'),
 
+    path('', to_login_redirect, name='user-login'),
+
     path('login/', UserLoginView.as_view(), name='user-login'),
     path('logout/', user_logout, name='user-logout'),
     path('register/', UserRegisterView.as_view(), name='user-register'),
