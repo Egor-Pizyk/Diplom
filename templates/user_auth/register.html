@@ -1,23 +1,44 @@
-<form method="post">
-    {% csrf_token %}
-    <input type="email" name="username" id="login-email" placeholder="Email">
-    <input type="password" name="password1" id="login-password1" placeholder="Пароль">
-    <input type="password" name="password2" id="login-password2" placeholder="Підтвердження пароля">
+{% extends "base/base.html" %}
+{% load static %}
 
-    <input type="radio" name="role" id="role-EMP" value="EMP">
-    <label for="role-EMP">I'm recruiter</label>
+{% block main_content %}
+    <head>
+        <link rel="stylesheet" href="{% static 'user_auth/css/style.css' %}">
+    </head>
 
-    <input type="radio" name="role" id="role-CAN" value="CAN">
-    <label for="role-CAN">I'm candidat</label>
 
-    <div class="error">
-        {% for field, errors in form.errors.items %}
-            {% for error in errors %}
-                {{ error }}<br>
-            {% endfor %}
-        {% endfor %}
+    <div class="form_view">
+        <div class="form_header">
+            Career Quest
+        </div>
+
+        <form method="post" class="auth_form">
+            {% csrf_token %}
+            <input type="email" class="email_field default_field" name="username" id="login-email" placeholder="Email">
+            <input type="password" class="password_field default_field" name="password1" id="login-password1"
+                   placeholder="Password">
+            <input type="password" class="password_field default_field" name="password2" id="login-password2"
+                   placeholder="Password confirm">
+
+            <div class="role_selector">
+                <input type="radio" name="role" id="role-EMP" value="EMP">
+                <label for="role-EMP">I'm a recruiter</label>
+                <br>
+                <input type="radio" class="radio_field" name="role" id="role-CAN" value="CAN">
+                <label for="role-CAN">I'm a candidat</label>
+            </div>
+
+            <div class="auth_error">
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        <div class="error_message">{{ error }}</div>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+
+            <input type="submit" class="default_btn" value="Register">
+        </form>
+
+        <a href="{% url 'user_auth:user-login' %}" class="default_url">I have an account</a>
     </div>
-
-    <input type="submit" value="Register">
-</form>
-<a href="{% url 'user_auth:user-login' %}">I have an account</a>
+{% endblock %}

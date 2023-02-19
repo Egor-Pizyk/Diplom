@@ -1,0 +1,26 @@
+.form_view{
+    margin: 0 auto;
+    width: 302px;
+}
+
+.form_header{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+
+    color: #212529;
+
+    margin-bottom: 22px;
+}
+
+.auth_form input{
+    margin-bottom: 16px;
+}
+
+.role_selector{
+    margin: 5px -5px;
+}
+
+.email_field, .password_field{
+    width: 300px;
+}

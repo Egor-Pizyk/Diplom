@@ -21,7 +21,7 @@ def to_login_redirect(request):
     if isinstance(request.user, AnonymousUser):
         return redirect('user_auth:user-login')
     else:
-        return redirect('user_profile:main-info')
+        return redirect('user_profile:my-profile')
 
 
 class UserLoginView(LoginView):

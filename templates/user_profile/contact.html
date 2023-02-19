@@ -1,48 +1,89 @@
+{% extends "base/base.html" %}
 {% load static %}
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
 
-    <label for="position_id">First name</label>
-    <input type="text" name="first_name" id="position_id">
+{% block main_content %}
+    <head>
+        <link rel="stylesheet" href="{% static 'user_profile/css/style.css' %}">
+    </head>
 
-    <label for="position_id">Last name</label>
-    <input type="text" name="last_name" id="position_id">
-
-    <label for="position_id">Email</label>
-    <input type="text" name="work_email" id="position_id">
-
-    <label for="position_id">Skype</label>
-    <input type="text" name="skype" id="position_id">
-
-    <label for="position_id">Phone</label>
-    <input type="text" name="phone" id="position_id">
-
-    <label for="position_id">Telegram</label>
-    <input type="text" name="telegram" id="position_id">
-
-    <label for="position_id">LinkedIn</label>
-    <input type="text" name="linkedin_url" id="position_id">
-
-    <label for="position_id">GitHub url</label>
-    <input type="text" name="github_url" id="position_id">
-
-    <label for="position_id">Protfolio url</label>
-    <input type="text" name="portfolio_url" id="position_id">
-
-    <label for="position_id">CV</label>
-    <input type="file" name="cv_file" id="position_id">
-
-    <label for="position_id">Avatar</label>
-    <input type="file" name="avatar_img" id="position_id">
-
-    <div class="error">
-        {% for field, errors in form.errors.items %}
-            {% for error in errors %}
-                {{ field }} {{ error }}<br>
-            {% endfor %}
-        {% endfor %}
+    <div class="form_header">
+        <div class="form_title">My contacts</div>
+        {% include 'user_profile/profile_tabs.html' %}
     </div>
 
-    <input type="submit" value="Save">
+    <form method="post" enctype="multipart/form-data" class="default_form">
+        {% csrf_token %}
+        <table class="form_table">
 
-</form>
+            <tr>
+                <td><label for="position_id">First name</label></td>
+                <td><input class="default_field" type="text" name="first_name" id="position_id" value="{{ first_name }}"></td>
+            </tr>
+
+            <tr>
+                <td><label for="position_id">Last name</label></td>
+                <td><input class="default_field" type="text" name="last_name" id="position_id" value="{{ last_name }}"></td>
+            </tr>
+
+            <tr>
+                <td><label for="position_id">Email</label></td>
+                <td><input class="default_field" type="text" name="work_email" id="position_id" value="{{ work_email }}"></td>
+            </tr>
+
+            <tr>
+                <td><label for="position_id">Skype</label></td>
+                <td><input class="default_field" type="text" name="skype" id="position_id" value="{{ skype }}"></td>
+            </tr>
+
+            <tr>
+                <td><label for="position_id">Phone</label></td>
+                <td><input class="default_field" type="text" name="phone" id="position_id" value="{{ phone }}"></td>
+            </tr>
+
+            <tr>
+                <td><label for="position_id">Telegram</label></td>
+                <td><input class="default_field" type="text" name="telegram" id="position_id" value="{{ telegram }}"></td>
+            </tr>
+
+            <tr>
+                <td><label for="position_id">LinkedIn</label></td>
+                <td><input class="default_field" type="text" name="linkedin_url" id="position_id" value="{{ linkedin_url }}"></td>
+            </tr>
+
+            <tr>
+                <td><label for="position_id">GitHub url</label></td>
+                <td><input class="default_field" type="text" name="github_url" id="position_id" value="{{ github_url }}"></td>
+            </tr>
+
+            <tr>
+                <td><label for="position_id">Protfolio url</label></td>
+                <td><input class="default_field" type="text" name="portfolio_url" id="position_id" value="{{ portfolio_url }}"></td>
+            </tr>
+
+            <tr>
+                <td><label for="position_id">CV</label></td>
+                <td><input type="file" name="cv_file" id="position_id"></td>
+            </tr>
+
+            <tr>
+                <td><label for="position_id">Avatar</label></td>
+                <td><input type="file" name="avatar_img" id="position_id"></td>
+            </tr>
+
+
+            <div class="error">
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        {{ field }} {{ error }}<br>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+
+
+            <tr>
+                <td><input type="submit" class="default_btn" value="Save"></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}

@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     'user_profile.apps.UserProfileConfig',
     'vacancy.apps.VacancyConfig',
+    'chat.apps.ChatConfig',
     'user_auth.apps.UserAuthConfig',
 ]
 

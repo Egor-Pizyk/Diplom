@@ -1,18 +1,38 @@
-<form method="post">
-    {% csrf_token %}
-    <input type="email" name="username" id="login-email" placeholder="Email">
-    <input type="password" name="password" id="login-password1" placeholder="Пароль">
+{% extends "base/base.html" %}
+{% load static %}
 
-    <div class="error">
-        {% for field, errors in form.errors.items %}
-            {% for error in errors %}
-                {{ error }}<br>
-            {% endfor %}
-        {% endfor %}
+{% block main_content %}
+    <head>
+        <link rel="stylesheet" href="{% static 'user_auth/css/style.css' %}">
+    </head>
+
+    <div class="form_view">
+        <div class="form_header">
+            Career Quest
+        </div>
+
+        <form method="post" class="auth_form">
+            {% csrf_token %}
+            <input class="email_field default_field" type="email" name="username" id="login-email" placeholder="Email">
+            <input class="password_field default_field" type="password" name="password" id="login-password1" placeholder="Password">
+
+            <div class="auth_error">
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        <div class="error_message">{{ error }}</div>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+
+            <input type="submit" class="default_btn" value="Log in">
+        </form>
+
+        <div class="other_url">
+            <a href="{% url 'user_auth:user-register' %}" class="default_url">Sign in</a>
+            <span class="default_url"> · </span>
+            <a href="{% url 'user_auth:user-remind' %}" class="default_url">Forgot password?</a>
+        </div>
     </div>
 
-    <input type="submit" value="Login">
-</form>
-<a href="{% url 'user_auth:user-register' %}">Реєстрація</a>
- ·
-<a href="{% url 'user_auth:user-remind' %}">Забув пароль?</a>
+    <script src="{% static 'user_auth/js/index.js' %}"></script>
+{% endblock %}

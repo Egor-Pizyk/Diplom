@@ -4,15 +4,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="{% static 'jquery-3.6.3.min.js' %}"></script>
+    <script src="{% static 'base/jquery-3.6.3.min.js' %}"></script>
+    <script src="{% static 'base/js/index.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'base/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <title>Career Quest</title>
 </head>
 <body>
     {% include 'base/header.html' %}
+    <div class="content">
+        {% block main_content %}
+        {% endblock %}
+    </div>
 
-    {% block main_content %}
-    {% endblock %}
-
+    {% include 'base/footer.html' %}
 </body>
 </html>

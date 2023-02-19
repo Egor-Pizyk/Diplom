@@ -1,32 +1,45 @@
+{% load static %}
+
 <header>
-    <ul class="navbar">
-        <li class="nav-item"><a href="#" class="nav-link">Vacancies</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Suggestions</a></li>
-    </ul>
+    <div class="content header">
+        <div class="left_side">
+            <div class="logo">CQ</div>
 
-    <div class="user_status">
-        {% if user.role == 'CAN' %}
-            {% if user.candidate_set.all.0.is_active_profile %}
-                In active job search
-            {% else %}
-                Inactive
+            {% if user.is_authenticated %}
+                <ul class="navbar">
+                    <li class="nav-item"><a href="#" class="nav-link">Vacancies</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Suggestions</a></li>
+                </ul>
             {% endif %}
-        {% endif %}
-    </div>
+        </div>
+        <div class="right_side">
+            {% if user.is_authenticated %}
+                <div class="user_status">
+                    {% if user.role == 'CAN' %}
+                        {% if user.candidate_set.all.0.is_active_profile %}
+                            <div class="user_status_text" style="color: #FFFFFF">In active job search</div>
+                        {% else %}
+                            <div class="user_status_text" style="color: #469E41">Inactive</div>
+                        {% endif %}
+                    {% endif %}
+                </div>
 
-    <div class="images-container">
-        <img src="" alt="userpic" class="userpic-image">
-    </div>
+                <div class="images-container">
+                    <img src="{% static user.get_avatar_img %}" alt="userpic" class="userpic-image">
+                </div>
 
-    <div class="header-dropdown">
-        <div class="header-dropdown--btn">
-        <img src="" alt="header-dropdown">
-    </div>
+                <div class="header-dropdown">
+                    <div class="header-dropdown--btn">
+                        <div class="header-dropdown--box"></div>
+                    </div>
 
-    <ul>
-        <li>My profile</li>
-        <li>Switch to Ukrainian</li>
-        <li><a href="{% url 'user_auth:user-logout' %}">Log out</a></li>
-    </ul>
+                    <ul class="header-dropdown-item">
+                        <li><a href="#">My profile</a></li>
+                        <li><a href="#">Switch to Ukrainian</a></li>
+                        <li><a href="{% url 'user_auth:user-logout' %}">Log out</a></li>
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
     </div>
 </header>

@@ -1,0 +1,170 @@
+.default_field{
+    padding: 9px;
+    height: 36px;
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+}
+
+.non_empty_field{
+    background: #E8F0FE;
+}
+
+.default_btn{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+
+    color: #FFFFFF;
+
+    padding: 11px 24px;
+
+    background: #469E41;
+    border: 1px solid #469E41;
+    border-radius: 4px;
+}
+
+.default_url{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+
+    color: #469E41;
+}
+
+header{
+    height: 50px;
+    background-color: #F8F8F8;
+    margin-bottom: 40px;
+}
+
+.header, .navbar, .left_side, .right_side{
+    display: flex;
+    align-items: center;
+}
+
+.left_side, .right_side{
+    margin-top: 6px;
+}
+
+.images-container{
+    margin: 0 10px;
+}
+
+.header{
+    justify-content: space-between;
+}
+
+.navbar li a{
+    text-decoration: none;
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+
+    color: rgba(0, 0, 0, 0.7);
+
+    margin-left: 35px;
+}
+
+footer{
+    border-top: 1px solid #DDDDDD;
+    bottom: 0 ;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+}
+
+.logo{
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 28px;
+
+    color: #000000;
+}
+
+.content{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.user_status{
+    background: #6C757D;
+    border-radius: 750px;
+}
+
+.user_status_text{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+
+    padding: 4px 10px;
+
+}
+
+.auth_error .error_message{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+
+    color: #F03F3F;
+
+    margin-bottom: 4px;
+}
+
+.auth_form .auth_error{
+    margin-bottom: 12px;
+}
+
+.userpic-image{
+    width: 35px;
+    height: 35px;
+    border-radius: 17px;
+    border: 1px solid #333333;
+}
+
+.header-dropdown--box{
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 10px solid #333333;
+
+    rotate: 200grad;
+}
+
+.header-dropdown{
+    position: relative;
+}
+
+.header-dropdown-item{
+    width: 90px;
+    position: absolute;
+    left: -10px;
+    top: 30px;
+    padding: 10px;
+
+    background-color: #F8F8F8;
+    border-radius: 0 0 10px 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.header-dropdown-item li{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+
+}
+
+.header-dropdown-item li a{
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+}

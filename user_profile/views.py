@@ -21,15 +21,18 @@ class FillMainInfoProfile(LoginRequiredMixin, UserProfileFormDataMixin, Template
         candidate = Candidate.objects.get(user_id=user.pk)
         form = MainDataCandidateProfileForm()
 
-        context = self.get_custom_context_data({'form': form})
+        context = self.get_custom_context_form_data({'form': form})
         if candidate:
-            context = self.get_filled_candidate_form(candidate, context)
+            context = self.get_filled_candidate_profile_form(candidate, context)
+
+        context['tabs'] = self.profile_tabs
+        context['selected_tab'] = 'Profile'
 
         return render(request, 'user_profile/profile.html', context)
 
     def post(self, request):
         form = MainDataCandidateProfileForm(request.POST)
-        context = self.get_custom_context_data()
+        context = self.get_custom_context_form_data()
         if form.is_valid():
             if request.user.role == 'CAN':
                 update_or_create_candidate(request)
@@ -45,14 +48,22 @@ class FillMainInfoProfile(LoginRequiredMixin, UserProfileFormDataMixin, Template
         return render(request, 'user_profile/profile.html', context)
 
 
-class FillContactProfile(LoginRequiredMixin, TemplateView):
+class FillContactProfile(LoginRequiredMixin, UserProfileFormDataMixin, TemplateView):
     login_url = LOGIN_URL
     redirect_field_name = 'user_profile:my-contact'
 
     def get(self, request, *args, **kwargs):
         user = request.user
         form = ContactDataCandidateProfileForm(instance=user)
+        candidate = Candidate.objects.get(user_id=user.pk)
         context = {'form': form}
+
+        if candidate.user.first_name:
+            context = self.get_filled_candidate_contacts_form(candidate, context)
+
+        context['tabs'] = self.profile_tabs
+        context['selected_tab'] = 'Contacts'
+
         return render(request, 'user_profile/contact.html', context)
 
     def post(self, request, *args, **kwargs):
@@ -69,7 +80,7 @@ class FillContactProfile(LoginRequiredMixin, TemplateView):
 
 @login_required(redirect_field_name='user_profile:my-profile')
 def remove_m_profile(request):
-    if request.method == "POST":
+    if request.method == "GET":
         User.objects.filter(pk=request.user.pk).delete()
 
         return redirect('user_auth:user-login')

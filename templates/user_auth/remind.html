@@ -1,16 +1,33 @@
-<form method="post">
-    {% csrf_token %}
-    <input type="email" name="username" id="login-email" placeholder="Email">
+{% extends "base/base.html" %}
+{% load static %}
 
-    <div class="error">
-        {% for field, errors in form.errors.items %}
-            {% for error in errors %}
-                {{ error }}
-            {% endfor %}
-        {% endfor %}
+{% block main_content %}
+    <head>
+        <link rel="stylesheet" href="{% static 'user_auth/css/style.css' %}">
+    </head>
+
+    <div class="form_view">
+        <div class="form_header">
+            Career Quest
+        </div>
+
+        <form method="post" class="auth_form">
+            {% csrf_token %}
+            <input type="email" class="email_field default_field" name="username" id="login-email" placeholder="Email">
+
+            <div class="error">
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+
+            <input type="submit" class="default_btn" value="Continue">
+        </form>
+        <a href="{% url 'user_auth:user-login' %}" class="default_url">I remembered a password</a>
+
     </div>
 
-    <input type="submit" value="Continue">
-</form>
-<a href="{% url 'user_auth:user-login' %}">I remembered a password</a>
-
+    <script src="{% static 'user_auth/js/index.js' %}"></script>
+{% endblock %}

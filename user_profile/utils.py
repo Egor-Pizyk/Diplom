@@ -51,13 +51,19 @@ def update_candidate(request):
     )
 
     candidate = Candidate.objects.get(user__pk=request.user.pk)
-    candidate.user.first_name = request.POST.get('first_name')
-    candidate.user.last_name = request.POST.get('last_name')
-
-    if candidate.cv_file:
+    if request.FILES.get('cv_file', None):
         candidate.cv_file = request.FILES['cv_file']
-        candidate.save()
 
-    if candidate.avatar_img:
+    if request.FILES.get('avatar_img', None):
         candidate.avatar_img = request.FILES['avatar_img']
-        candidate.save()
+
+    candidate.save()
+
+    if request.POST.get('first_name') or request.POST.get('last_name'):
+        candidate.user.first_name = request.POST.get('first_name')
+        candidate.user.last_name = request.POST.get('last_name')
+
+        candidate.user.save()
+
+
+

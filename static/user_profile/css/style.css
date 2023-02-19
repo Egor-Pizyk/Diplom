@@ -1,0 +1,74 @@
+/*.form_table td{*/
+/*    border: 1px solid black;*/
+/*}*/
+
+.form_table {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+
+    color: #212529;
+}
+
+.form_table input[type=text], input[type=range], select, textarea {
+    width: 450px;
+}
+
+.form_table textarea {
+    height: 200px;
+    resize: none;
+}
+
+.form_table td {
+    vertical-align: middle;
+    padding: 10px 80px;
+}
+
+.form_table td a {
+    margin-top: 5px;
+}
+
+.remove_form {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 80px;
+}
+
+.form_title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 27px;
+
+    color: #212529;
+
+    margin-bottom: 30px;
+}
+
+.form_header{
+    margin-left: 80px;
+    margin-bottom: 15px;
+}
+
+.profile_tabs ul {
+    display: flex;
+    gap: 15px ;
+}
+
+#selected_tab {
+    color: #FFFFFF;
+    padding: 7px 10px;
+    background: #469E41;
+    border-radius: 3.75px;
+}
+
+.profile_tabs a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+
+
+    color: #469E41;
+}
+
+
