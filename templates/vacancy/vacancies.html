@@ -1,0 +1,32 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block main_content %}
+    <head>
+        <link rel="stylesheet" href="{% static 'vacancy/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'user_profile/css/style.css' %}">
+    </head>
+
+    <div class="form_header">
+        <div class="form_title">My vacancies</div>
+        {% include 'user_profile/profile_tabs.html' %}
+    </div>
+
+
+    <div class="vacancies" style="margin-left: 80px;">
+        <div class="create_vacancy_btn"><a href="{% url 'vacancy:vacancy-create' %}" class="default_btn">Create vacancy</a></div>
+
+        {% for vacancy in vacancies %}
+            <div class="vacancy_item">
+                <div class="vacancy_title"><a href="{{ vacancy.get_absolute_url }}">{{ vacancy.title }}</a></div>
+                <div class="vacancy_description">{{ vacancy.text }}</div>
+                <div class="vacancy_info">
+                    <div class="recruiter_name">{{ vacancy.employer.company_name }}</div>
+                    <div class="vacancy_country">{{ vacancy.country.name }}</div>
+                    <div class="vacancy_experience">{{ vacancy.experience }} year of exp.</div>
+                    <div class="vacancy_english_level">{{ vacancy.english_level }} english</div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

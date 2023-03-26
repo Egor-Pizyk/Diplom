@@ -32,7 +32,7 @@ class UserLoginView(LoginView):
         if self.request.user.first_name == '':
             return reverse_lazy('user_profile:my-profile')
         else:
-            return reverse_lazy('user_auth:success')
+            return reverse_lazy('vacancy:vacancy-list')
 
 
 def user_logout(request):

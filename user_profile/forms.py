@@ -2,7 +2,7 @@ from django import forms
 
 from CareerQuest.settings import CV_FILES_PATH, AVATAR_FILES_PATH
 from user_profile.choices import ENGLISH_LEVEL, EMPLOYMENT_RATE
-from user_profile.models import User, Candidate
+from user_profile.models import User, Candidate, Employer
 
 
 class MainDataCandidateProfileForm(forms.ModelForm):
@@ -36,6 +36,25 @@ class MainDataCandidateProfileForm(forms.ModelForm):
                   'fav_contact_method_id')
 
 
+class MainDataEmployerProfileForm(forms.ModelForm):
+    company_name = forms.CharField()
+    about_company = forms.CharField()
+    position = forms.CharField()
+    company_url = forms.CharField()
+    dou_url = forms.CharField()
+    employ_count = forms.CharField()
+
+    class Meta:
+        model = Candidate
+        fields = ('company_name',
+                  'about_company',
+                  'position',
+                  'company_url',
+                  'dou_url',
+                  'employ_count',
+                  )
+
+
 class ContactDataCandidateProfileForm(forms.ModelForm):
     first_name = forms.CharField(max_length=255, required=False)
     last_name = forms.CharField(max_length=255, required=False)
@@ -67,3 +86,12 @@ class ContactDataCandidateProfileForm(forms.ModelForm):
                   'portfolio_url',
                   'cv_file',
                   'avatar_img')
+
+class ContactDataEmployerProfileForm(forms.ModelForm):
+    first_name = forms.CharField(max_length=255, required=False)
+    last_name = forms.CharField(max_length=255, required=False)
+    avatar_img = forms.FileField(required=False)
+
+    class Meta:
+        model = Employer
+        fields = ('avatar_img',)

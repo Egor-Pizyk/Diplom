@@ -50,25 +50,4 @@
     margin-bottom: 15px;
 }
 
-.profile_tabs ul {
-    display: flex;
-    gap: 15px ;
-}
-
-#selected_tab {
-    color: #FFFFFF;
-    padding: 7px 10px;
-    background: #469E41;
-    border-radius: 3.75px;
-}
-
-.profile_tabs a {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-
-
-    color: #469E41;
-}
-
 

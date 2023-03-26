@@ -11,199 +11,268 @@
         {% include 'user_profile/profile_tabs.html' %}
     </div>
 
-    <form method="post" class="default_form">
-        {% csrf_token %}
-        <table class="form_table">
-            <tr>
-                <td><label for="position_id">Position</label></td>
-                <td><input class="default_field" type="text" name="position" id="position_id"
-                           value="{{ user_position }}"></td>
-            </tr>
-            <tr>
-                <td><label for="month_salary_id">Month salary</label></td>
-                <td><input class="default_field" type="text" name="month_salary" id="month_salary_id"
-                           value="{{ user_month_salary }}">
-                </td>
-            </tr>
-            <tr>
-                <td><label for="hour_salary_id">Hour salary</label></td>
-                <td><input class="default_field" type="text" name="hour_salary" id="hour_salary_id"
-                           value="{{ user_hour_salary }}"></td>
-            </tr>
-            <tr>
-                <td><label for="experience_id">Experience</label></td>
-                <td>
-                    {% if user_experience != '' %}
-                        <input type="range" name="experience" id="experience_id" min="0" max="9"
-                               value="{{ user_experience }}"
-                               list="experience_markers">
-                    {% else %}
-                        <input type="range" name="experience" id="experience_id" min="0" max="9" value="0"
-                               list="experience_markers">
-                    {% endif %}
-
-                    <div class="range_value">
-                        <span class="range_value">No experience</span>
-                        <datalist id="experience_markers">
-                            <option value="0">No experience</option>
-                            <option value="1">6 month</option>
-                            <option value="2">1 year</option>
-                            <option value="3">1.5 - 2 years</option>
-                            <option value="4">3 - 4 years</option>
-                            <option value="5">4 - 5 years</option>
-                            <option value="6">6 - 7 years</option>
-                            <option value="7">8 - 9 years</option>
-                            <option value="8">10 years</option>
-                            <option value="9">10+ year</option>
-                        </datalist>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="country_id">Country</label></td>
-                <td>
-                    <select name="country_id" class="default_field" id="country_id">
-                        {% if user_country_id == '' %}
-                            <option selected>---------</option>
+    {% if user.role == 'CAN' %}
+        <form method="post" class="default_form">
+            {% csrf_token %}
+            <table class="form_table">
+                <tr>
+                    <td><label for="position_id">Position</label></td>
+                    <td><input class="default_field" type="text" name="position" id="position_id"
+                               value="{{ user_position }}"></td>
+                </tr>
+                <tr>
+                    <td><label for="month_salary_id">Month salary</label></td>
+                    <td><input class="default_field" type="text" name="month_salary" id="month_salary_id"
+                               value="{{ user_month_salary }}">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="hour_salary_id">Hour salary</label></td>
+                    <td><input class="default_field" type="text" name="hour_salary" id="hour_salary_id"
+                               value="{{ user_hour_salary }}"></td>
+                </tr>
+                <tr>
+                    <td><label for="experience_id">Experience</label></td>
+                    <td>
+                        {% if user_experience != '' %}
+                            <input type="range" name="experience" id="experience_id" min="0" max="9"
+                                   value="{{ user_experience }}"
+                                   list="experience_markers">
+                        {% else %}
+                            <input type="range" name="experience" id="experience_id" min="0" max="9" value="0"
+                                   list="experience_markers">
                         {% endif %}
 
-                        {% for country in country_list %}
-                            {% if user_country_id == country.pk %}
-                                <option value="{{ country.pk }}" selected>{{ country.name }}</option>
-                            {% else %}
-                                <option value="{{ country.pk }}">{{ country.name }}</option>
+                        <div class="range_value">
+                            <span class="range_value">No experience</span>
+                            <datalist id="experience_markers">
+                                <option value="0">No experience</option>
+                                <option value="1">6 month</option>
+                                <option value="2">1 year</option>
+                                <option value="3">1.5 - 2 years</option>
+                                <option value="4">3 - 4 years</option>
+                                <option value="5">4 - 5 years</option>
+                                <option value="6">6 - 7 years</option>
+                                <option value="7">8 - 9 years</option>
+                                <option value="8">10 years</option>
+                                <option value="9">10+ year</option>
+                            </datalist>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="country_id">Country</label></td>
+                    <td>
+                        <select name="country_id" class="default_field" id="country_id">
+                            {% if user_country_id == '' %}
+                                <option selected>---------</option>
                             {% endif %}
-                        {% endfor %}
-                    </select>
-                    <br>
-                    {% if user_is_ready_to_relocate_country %}
-                        <input type="checkbox" class="checkbox_inp" name="is_ready_to_relocate_country"
-                               id="is_ready_to_relocate_country_id"
-                               value='true' checked>
-                    {% else %}
-                        <input type="checkbox" class="checkbox_inp" name="is_ready_to_relocate_country"
-                               id="is_ready_to_relocate_country_id"
-                               value='true'>
-                    {% endif %}
-                    <label for="is_ready_to_relocate_country_id">I'm ready to relocate in other country</label>
 
-                </td>
-            </tr>
-            <tr>
-                <td><label for="skills_id">Stack of used technologies</label></td>
-                <td><textarea class="default_field" type="" name="skills" id="skills_id" cols="30"
-                              rows="10">{{ user_skills }}</textarea>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="work_category_id">Work category</label></td>
-                <td>
-                    <select name="work_category_id" class="default_field" id="work_category_id">
-                        {% if user_work_category_id == '' %}
-                            <option selected>---------</option>
+                            {% for country in country_list %}
+                                {% if user_country_id == country.pk %}
+                                    <option value="{{ country.pk }}" selected>{{ country.name }}</option>
+                                {% else %}
+                                    <option value="{{ country.pk }}">{{ country.name }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                        <br>
+                        {% if user_is_ready_to_relocate_country %}
+                            <input type="checkbox" class="checkbox_inp" name="is_ready_to_relocate_country"
+                                   id="is_ready_to_relocate_country_id"
+                                   value='true' checked>
+                        {% else %}
+                            <input type="checkbox" class="checkbox_inp" name="is_ready_to_relocate_country"
+                                   id="is_ready_to_relocate_country_id"
+                                   value='true'>
                         {% endif %}
+                        <label for="is_ready_to_relocate_country_id">I'm ready to relocate in other country</label>
 
-                        {% for work_type in work_type_list %}
-                            <optgroup label="{{ work_type.name }}">
-                                {% for work_category in work_category_list %}
-                                    {% if work_category.work_type.pk == work_type.pk %}
-                                        {% if user_work_category_id == work_category.pk %}
-                                            <option value="{{ work_category.pk }}"
-                                                    selected>{{ work_category.name }}</option>
-                                        {% else %}
-                                            <option value="{{ work_category.pk }}">{{ work_category.name }}</option>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="skills_id">Stack of used technologies</label></td>
+                    <td><textarea class="default_field" type="" name="skills" id="skills_id" cols="30"
+                                  rows="10">{{ user_skills }}</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="work_category_id">Work category</label></td>
+                    <td>
+                        <select name="work_category_id" class="default_field" id="work_category_id">
+                            {% if user_work_category_id == '' %}
+                                <option selected>---------</option>
+                            {% endif %}
+
+                            {% for work_type in work_type_list %}
+                                <optgroup label="{{ work_type.name }}">
+                                    {% for work_category in work_category_list %}
+                                        {% if work_category.work_type.pk == work_type.pk %}
+                                            {% if user_work_category_id == work_category.pk %}
+                                                <option value="{{ work_category.pk }}"
+                                                        selected>{{ work_category.name }}</option>
+                                            {% else %}
+                                                <option value="{{ work_category.pk }}">{{ work_category.name }}</option>
+                                            {% endif %}
                                         {% endif %}
-                                    {% endif %}
-                                {% endfor %}
-                            </optgroup>
-                        {% endfor %}
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="english_level_id">English level</label></td>
-                <td>
-                    <select class="default_field" name="english_level" id="english_level_id">
-                        {% if user_english_level == '' %}
-                            <option selected>---------</option>
-                        {% endif %}
+                                    {% endfor %}
+                                </optgroup>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="english_level_id">English level</label></td>
+                    <td>
+                        <select class="default_field" name="english_level" id="english_level_id">
+                            {% if user_english_level == '' %}
+                                <option selected>---------</option>
+                            {% endif %}
 
-                        {% for english_level in english_level_list %}
-                            {% if user_english_level == english_level.1 %}
-                                <option value="{{ english_level.0 }}" selected>{{ english_level.1 }}</option>
-                            {% else %}
-                                <option value="{{ english_level.0 }}">{{ english_level.1 }}</option>
+                            {% for english_level in english_level_list %}
+                                {% if user_english_level == english_level.1 %}
+                                    <option value="{{ english_level.0 }}" selected>{{ english_level.1 }}</option>
+                                {% else %}
+                                    <option value="{{ english_level.0 }}">{{ english_level.1 }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="employment_rate_id">Employment rate</label></td>
+                    <td>
+                        <select class="default_field" name="employment_rate" id="employment_rate_id">
+                            {% if user_employment_rate == '' %}
+                                <option selected>---------</option>
                             {% endif %}
-                        {% endfor %}
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="employment_rate_id">Employment rate</label></td>
-                <td>
-                    <select class="default_field" name="employment_rate" id="employment_rate_id">
-                        {% if user_employment_rate == '' %}
-                            <option selected>---------</option>
-                        {% endif %}
 
-                        {% for employment_rate in employment_rate_list %}
-                            {% if user_employment_rate == employment_rate.1 %}
-                                <option value="{{ employment_rate.0 }}" selected>{{ employment_rate.1 }}</option>
-                            {% else %}
-                                <option value="{{ employment_rate.0 }}">{{ employment_rate.1 }}</option>
+                            {% for employment_rate in employment_rate_list %}
+                                {% if user_employment_rate == employment_rate.1 %}
+                                    <option value="{{ employment_rate.0 }}" selected>{{ employment_rate.1 }}</option>
+                                {% else %}
+                                    <option value="{{ employment_rate.0 }}">{{ employment_rate.1 }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="about_work_experience_id">My work experience</label></td>
+                    <td><textarea class="default_field" name="about_work_experience" id="about_work_experience_id"
+                                  cols="30"
+                                  rows="10">{{ user_about_work_experience }}</textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="about_work_expectations_id">My work expectations</label></td>
+                    <td><textarea class="default_field" name="about_work_expectations" id="about_work_expectations_id"
+                                  cols="30"
+                                  rows="10">{{ user_about_work_expectations }}</textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="fav_contact_method_id">To contact with me use</label></td>
+                    <td>
+                        <select class="default_field" name="fav_contact_method_id" id="fav_contact_method_id">
+                            {% if user_fav_contact_method_id == '' %}
+                                <option selected>---------</option>
                             {% endif %}
-                        {% endfor %}
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="about_work_experience_id">My work experience</label></td>
-                <td><textarea class="default_field" name="about_work_experience" id="about_work_experience_id" cols="30"
-                              rows="10">{{ user_about_work_experience }}</textarea></td>
-            </tr>
-            <tr>
-                <td><label for="about_work_expectations_id">My work expectations</label></td>
-                <td><textarea class="default_field" name="about_work_expectations" id="about_work_expectations_id"
-                              cols="30"
-                              rows="10">{{ user_about_work_expectations }}</textarea></td>
-            </tr>
-            <tr>
-                <td><label for="fav_contact_method_id">To contact with me use</label></td>
-                <td>
-                    <select class="default_field" name="fav_contact_method_id" id="fav_contact_method_id">
-                        {% if user_fav_contact_method_id == '' %}
-                            <option selected>---------</option>
-                        {% endif %}
-                        {% for fav_contact_method in fav_contact_method_list %}
-                            {% if user_fav_contact_method_id == fav_contact_method.pk %}
-                                <option value="{{ fav_contact_method.pk }}"
-                                        selected>{{ fav_contact_method.name }}</option>
-                            {% else %}
-                                <option value="{{ fav_contact_method.pk }}">{{ fav_contact_method.name }}</option>
-                            {% endif %}
-                        {% endfor %}
-                    </select>
-                </td>
-            </tr>
-            <div class="error">
+                            {% for fav_contact_method in fav_contact_method_list %}
+                                {% if user_fav_contact_method_id == fav_contact_method.pk %}
+                                    <option value="{{ fav_contact_method.pk }}"
+                                            selected>{{ fav_contact_method.name }}</option>
+                                {% else %}
+                                    <option value="{{ fav_contact_method.pk }}">{{ fav_contact_method.name }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
                 <div class="error">
-                    {% for field, errors in form.errors.items %}
-                        {% for error in errors %}
-                            {{ field }} {{ error }}<br>
+                    <div class="error">
+                        {% for field, errors in form.errors.items %}
+                            {% for error in errors %}
+                                {{ field }} {{ error }}<br>
+                            {% endfor %}
                         {% endfor %}
-                    {% endfor %}
+                    </div>
                 </div>
-            </div>
-            <tr>
-                <td>
-                    <input type="submit" class="default_btn" value="Save">
-                    <br><br>
-                    <a href="{% url 'user_profile:remove-my-profile' %}" class="default_url">Remove profile</a>
-                </td>
-                <td></td>
-            </tr>
-        </table>
-    </form>
+                <tr>
+                    <td>
+                        <input type="submit" class="default_btn" value="Save">
+                        <br><br>
+                        <a href="{% url 'user_profile:remove-my-profile' %}" class="default_url">Remove profile</a>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+    {% else %}
+        <form method="post" class="default_form">
+            {% csrf_token %}
+            <table class="form_table">
+                <tr>
+                    <td><label for="position_id">Position</label></td>
+                    <td><input class="default_field" type="text" name="position" id="position_id"
+                               value="{{ user_position }}"></td>
+                </tr>
+                <tr>
+                    <td><label for="company_name_id">Company name</label></td>
+                    <td><input class="default_field" type="text" name="company_name" id="company_name_id"
+                               value="{{ user_company_name }}"></td>
+                </tr>
+                <tr>
+                    <td><label for="about_company_id">About company</label></td>
+                    <td><input class="default_field" type="text" name="about_company" id="about_company_id"
+                               value="{{ user_about_company }}"></td>
+                </tr>
+                <tr>
+                    <td><label for="company_url_id">Company website</label></td>
+                    <td><input class="default_field" type="text" name="company_url" id="company_url_id"
+                               value="{{ user_company_url }}"></td>
+                </tr>
+                <tr>
+                    <td><label for="dou_url_id">DOU url</label></td>
+                    <td><input class="default_field" type="text" name="dou_url" id="dou_url_id"
+                               value="{{ user_dou_url }}"></td>
+                </tr>
+                <tr>
+                    <td><label for="employ_count_id">Employ count</label></td>
+                    <td>
+                         <select class="default_field" name="employ_count" id="employ_count_id">
+                            {% if user_employ_count == '' %}
+                                <option selected>---------</option>
+                            {% endif %}
+
+                            {% for employ_count in employ_count_list %}
+                                {% if user_employ_count == employ_count.1 %}
+                                    <option value="{{ employ_count.0 }}" selected>{{ employ_count.1 }}</option>
+                                {% else %}
+                                    <option value="{{ employ_count.0 }}">{{ employ_count.1 }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <div class="error">
+                    <div class="error">
+                        {% for field, errors in form.errors.items %}
+                            {% for error in errors %}
+                                {{ field }} {{ error }}<br>
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <tr>
+                    <td>
+                        <input type="submit" class="default_btn" value="Save">
+                        <br><br>
+                        <a href="{% url 'user_profile:remove-my-profile' %}" class="default_url">Remove profile</a>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+    {% endif %}
 
     <script src="{% static 'user_profile/js/profile.js' %}"></script>
 {% endblock %}

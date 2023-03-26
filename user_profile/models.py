@@ -1,6 +1,6 @@
 
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, PermissionsMixin
 from django.utils.translation import gettext_lazy as _
 
 from CareerQuest.settings import CV_FILES_PATH, AVATAR_FILES_PATH, STATIC_URL
@@ -8,7 +8,7 @@ from user_profile.choices import ROLE, ENGLISH_LEVEL, EMPLOYMENT_RATE, EMPLOY_CO
 from user_profile.managers import UserProfileManager
 
 
-class User(AbstractUser):
+class User(AbstractUser, PermissionsMixin):
     username = None
     email = models.EmailField(_('email address'), unique=True)
     role = models.CharField(max_length=3, choices=ROLE)
@@ -19,7 +19,11 @@ class User(AbstractUser):
     REQUIRED_FIELDS = []
 
     def get_avatar_img(self):
-        return Candidate.objects.filter(user_id=self.pk).values('avatar_img')[0].get('avatar_img').replace('static/', '')
+        if self.role == 'CAN' and Candidate.objects.filter(user_id=self.pk).values('avatar_img'):
+            return Candidate.objects.filter(user_id=self.pk).values('avatar_img')[0].get('avatar_img').replace('static/', '')
+        elif self.role == 'EMP' and Employer.objects.filter(user_id=self.pk).values('avatar_img'):
+            return Employer.objects.filter(user_id=self.pk).values('avatar_img')[0].get('avatar_img').replace('static/', '')
+        return 'media/defualt_user_icon.svg'
 
 class Candidate(models.Model):
     user = models.ForeignKey('User', on_delete=models.CASCADE)
@@ -59,6 +63,8 @@ class Employer(models.Model):
     company_url = models.URLField()
     dou_url = models.URLField()
     employ_count = models.CharField(max_length=7, choices=EMPLOY_COUNT)
+    avatar_img = models.ImageField(upload_to=f'{STATIC_URL}{AVATAR_FILES_PATH}', blank=True, null=True)
+
 
     def __str__(self):
         return f'{self.user.email} {self.user.first_name} {self.user.last_name} - {self.company_name}'

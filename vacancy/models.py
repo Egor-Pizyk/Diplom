@@ -1,4 +1,6 @@
 from django.db import models
+from django.shortcuts import redirect
+from django.urls import reverse
 
 from user_profile.choices import EMPLOYMENT_RATE, ENGLISH_LEVEL
 from user_profile.models import User, Candidate, Employer, WorkCategory, Country
@@ -20,4 +22,6 @@ class Vacancy(models.Model):
     def __str__(self):
         return f'{self.employer.company_name} - {self.title}'
 
+    def get_absolute_url(self):
+        return reverse('vacancy:vacancy-detail', kwargs={'pk': self.pk})
 

@@ -1,0 +1,14 @@
+
+{% block vacancy_tabs %}
+<div class="profile_tabs">
+    <ul>
+        {% for tab in tabs %}
+            {% if tab.tab_name == selected_tab %}
+                <li><a id="selected_tab">{{ tab.tab_name }}</a></li>
+            {% else %}
+                <li><a href="{{ tab.tab_url }}">{{ tab.tab_name }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

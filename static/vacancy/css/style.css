@@ -1,0 +1,81 @@
+.vacancies_header {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 29px;
+
+    color: #212529;
+
+    margin-bottom: 22px;
+}
+
+.vacancies_header span {
+    color: #6C757D;
+}
+
+.vacancies {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    margin-top: 22px;
+}
+
+.vacancy_title a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 19.5px;
+
+    color: #469E41;
+
+    text-decoration: none;
+}
+
+.vacancy_description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+
+    color: #212529;
+}
+
+.vacancy_info {
+    display: flex;
+    gap: 25px;
+}
+
+.create_vacancy_btn {
+    margin-top: 10px;
+}
+
+.main_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vacancy_block_header {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+
+    color: #212529;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.right_side_vacancy ul li {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+
+    color: #6C757D;
+    margin: 3px 0;
+}
+
+.right_side_vacancy ul li span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+
+    color: #333333;
+}
+

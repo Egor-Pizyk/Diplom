@@ -1,0 +1,42 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block main_content %}
+    <head>
+        <link rel="stylesheet" href="{% static 'vacancy/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'user_profile/css/style.css' %}">
+    </head>
+
+    <div class="form_header">
+        <div class="form_title">{{ vacancy.title }}</div>
+    </div>
+
+    <a href="#" class="default_url" style="margin-left: 80px">{{ vacancy.employer.company_name }}</a>
+
+    <div class="main_content" style="margin-left: 80px">
+
+        <div class="left_side_vacancy">
+            <div class="vacancy_block requirements">
+                <div class="vacancy_block_header">Необхідні навички:</div>
+                {{ vacancy.requirements }}
+            </div>
+
+            <div class="vacancy_block text">
+                <div class="vacancy_block_header">Опис:</div>
+                {{ vacancy.text }}
+            </div>
+        </div>
+
+        <div class="right_side_vacancy">
+            <ul>
+                <li><span>Досвід:</span> {{ vacancy.experience }} (year)</li>
+                <li><span>Країна:</span> {{ vacancy.country }}</li>
+                <li><span>Рівень англійської мови:</span> {{ vacancy.english_level }}</li>
+                <li><span>Категорія роботи:</span> {{ vacancy.work_category }}</li>
+                <li><span>Рівень зайнятості:</span> {{ vacancy.employment_rate }}</li>
+                <li><span>Місячна заробітна плата:</span> {{ vacancy.month_salary }} (USD)</li>
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}
